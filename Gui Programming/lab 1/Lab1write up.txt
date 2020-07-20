@@ -1,0 +1,11 @@
+Difference between awt and swing
+
+Both awt and swing are libraries imported into a program when the programmer needs to use features from them.
+ But swing proceeded awt. awt came first.it allowed the user to rely on prebuilt libraries to implement some 
+of the architecture of the coding.but is caused inconsistancies depending on the platform implementing the program. 
+It was a heavyweight library relying on pre rendering all components.
+
+Swing countered this by creating a lightweight set of components. It also removed several of the inconsistancies 
+found in awt.It also implemented some brand new features that were unavailable with awt. With swings lightweight 
+components and new features it has done a great deal to replace awt. although it is worth noting that certain features, 
+mainly containers, still rely on awt to work.
