@@ -1,0 +1,49 @@
+/**
+ * @(#)MouseChooser.java
+ *
+ *
+ * @author 
+ * @version 1.00 2014/12/2
+ */
+//import libraries
+import javax.swing.*;
+import java.awt.*;
+import java.io.*;
+import java.awt.event.*;
+import javax.swing.filechooser.*;
+//main class
+public class FileChooser extends JFrame implements ActionListener{
+	//create button and filechooser globally
+	JButton open = new JButton("Open");
+   	JFileChooser fc;
+    
+    //constuctor
+    public FileChooser() {
+    	//name frame
+    	super("File Chooser");
+    	//create contentpane and panel
+    	Container c = getContentPane();
+    	JPanel panel = new JPanel();
+    	
+    	//create file chooser instance
+    	fc = new JFileChooser();
+    	fc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+    	//add action listener to button
+    	open.addActionListener(this);
+    	
+    	//add button to panel
+    	panel.add(open);
+    	
+    	//add panel to container
+    	c.add(panel);
+    	setVisible(true);
+    	setSize(300,300);
+    	
+    	
+    }//end constructor
+    
+    //action method
+    public void actionPerformed(ActionEvent e){
+    	//check for button click
+    	if(e.getSource() == open){
+    		int returnV

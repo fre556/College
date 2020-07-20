@@ -1,0 +1,22 @@
+/**
+ * @(#)ButtonDiag.java
+ *
+ *
+ * @author 
+ * @version 1.00 2014/12/2
+ */
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class ButtonDiag extends JFrame{
+	//constructor
+    public ButtonDiag() {
+    	JFrame frame = new JFrame();
+    	Object[] choice = {"OK","Cancel"};
+    	JOptionPane.showOptionDialog(frame,"Would you like to play a game?","Buttons pane",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null,choice,choice[0]);
+    }//end constructor
+    
+    public static void main(String args[]){
+    	new ButtonDiag();
+    }//end

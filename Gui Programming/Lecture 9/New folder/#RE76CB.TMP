@@ -1,0 +1,13 @@
+/**
+ * @(#)InputDiag.java
+ *
+ *
+ * @author 
+ * @version 1.00 2014/12/2
+ */
+//import libraries
+import javax.swing.*;
+import java.awt.*;
+public class InputDiag extends JFrame{
+	//craete frame and icon
+	ImageI

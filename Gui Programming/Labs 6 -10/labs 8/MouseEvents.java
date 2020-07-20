@@ -1,0 +1,63 @@
+/**
+ * @(#)MouseEvent.java
+ *
+ *
+ * @author
+ * @version 1.00 2014/12/2
+ */
+//import libraries
+import javax.swing.*;
+import javax.swing.border.LineBorder;
+import javax.swing.event.MouseInputListener;
+
+import java.awt.*;
+import java.awt.event.*;
+public class MouseEvents extends JFrame implements MouseInputListener {
+
+	JLabel label = new JLabel("Label");
+	//constructor
+    public MouseEvents() {
+		label.addMouseListener(this);
+    	JPanel panel = new JPanel();
+    	panel.setLayout(new BorderLayout());
+    	panel.add(label, BorderLayout.CENTER);
+    	getContentPane().add(panel);
+
+		setSize(300,300);
+		setVisible(true);
+    }//end constructor
+
+    //main method
+    public static void main(String args[]){
+    	new MouseEvents();
+
+    }//end main method
+
+    public void mouseClicked(MouseEvent e){
+    	label.setText("Mouse Clicked");
+    }
+
+    public void mouseEntered(MouseEvent e){
+    	label.setText("Mouse Entered");
+    }
+     public void mouseExited(MouseEvent e){
+    	label.setText("Mouse Exited");
+    }
+
+    public void mousePressed(MouseEvent e){
+    	label.setText("mouse held");
+    }
+
+    public void mouseReleased(MouseEvent e){
+    	label.setText("mouse released");
+    }
+
+    public void mouseDragged(MouseEvent e){
+    	label.setText("Mouse Dragged");
+    }
+
+    public void mouseMoved(MouseEvent e){
+    	label.setText("mouse moved");
+    }
+
+}//end class
